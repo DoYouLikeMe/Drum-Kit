@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "IBMPlexMono";
+  src: local("IBMPlexMono"),
+    url(fonts/IBMPlexMono-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #e5e5e5;
+  height: 100vh;
+  color: #ffff;
+  font-family: "IBMPlexMono", Courier, monospace;
+  font-style: normal;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.heading {
+  margin: 0;
+}
+
+.kit-container {
+  padding: 22px 20px 64px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 32px;
+  border: 4px solid #16161b;
+  box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.2),
+    inset 0px 2px 6px 4px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+      312.66deg,
+      rgba(0, 0, 0, 0) 10.9%,
+      rgba(0, 0, 0, 0.1) 51.63%,
+      rgba(0, 0, 0, 0) 90.53%
+    ),
+    linear-gradient(180deg, #4c4b51 0%, #1f1f21 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  max-width: 475px;
+  display: grid;
+  grid-template-columns: 104px 104px 104px;
+  grid-template-rows: 104px;
+  grid-auto-rows: auto;
+  gap: 15px;
+}
+
+.kit-button {
+  font-family: inherit;
+  background: linear-gradient(180deg, #222126 0%, #212025 100%);
+  border: 4px solid #08080a;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.09), 0px 4px 5px rgba(0, 0, 0, 0.06),
+    inset 0px 4px 4px rgba(255, 255, 255, 0.25),
+    inset 0px -5px 2px rgba(0, 0, 0, 0.1),
+    inset 4px 4px 4px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffff;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.kit-button:hover {
+  background: linear-gradient(180deg, #63dbaf 0%, #61dbae 100%);
+  color: #000;
+}
+
+.kit-button-active {
+  background: linear-gradient(180deg, #ece682 0%, #dfda79 100%);
+  color: #000;
+}
+
+.keyboard-button {
+  font-size: 24px;
+}
+
+.kit-name {
+  align-self: center;
+}
+
+@media (max-width: 425px) {
+  .buttons-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
