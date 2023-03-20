@@ -1,7 +1,6 @@
 "use strict";
 import playList from "/player.js";
 
-const audio = document.querySelector("audio");
 const buttonWrapper = document.querySelector(".buttons-wrapper");
 let previousButton;
 
@@ -15,6 +14,7 @@ const playSound = function (keyBoardCode) {
   if (!currentButton) return;
   previousButton = currentButton;
   currentButton.classList.add("kit-button-active");
+  const audio = new Audio();
   audio.currentTime = 0;
   const url = playList.find((sound) => sound.id === keyBoardCode).src;
   audio.src = url;
